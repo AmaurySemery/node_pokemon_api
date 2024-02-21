@@ -41,7 +41,7 @@ app.put('/api/pokemons/:id', (req, res) => {
   pokemons = pokemons.map(pokemon => {
     return pokemon.id === id ? pokemonUpdated: pokemon
   })
-  const message = `Le pokémon ${pokemonUpdated} a bien été modifié.`
+  const message = `Le pokémon ${pokemonUpdated.name} a bien été modifié.`
   res.json(success(message, pokemonUpdated))
 })
 
