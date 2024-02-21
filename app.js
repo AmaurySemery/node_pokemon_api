@@ -1,7 +1,7 @@
 const express = require('express')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
-const { success } = require('./helper')
+const { success, getUniqueId } = require('./helper')
 let pokemons = require('./mock-pokemon')
 
 const app = express()
@@ -26,7 +26,7 @@ app.get('/api/pokemons/:id', (req, res) => {
 })
 
 app.post('/api/pokemons', (req, res) => {
-  const id = 123
+  const id = getUniqueId(pokemons)
   const pokemonCreated = {...req.body, ...{id: id, created: new Date()}}
   pokemons.push(pokemonCreated)
   const message = `Le pokemon ${pokemonCreated.name} a bien été crée.`
