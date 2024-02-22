@@ -39,7 +39,7 @@ app.get('/api/pokemons', (req, res) => {
   res.json(success(message, pokemons))
 })
 
-app.get('/api/pokemons/:id', (req, res) => {
+app.get('/api/pokemons/:idz', (req, res) => {
   const id = parseInt(req.params.id)
   const pokemon = pokemons.find(pokemon => pokemon.id === id)
   const message = 'Un pokémon a bien été trouvé.'
