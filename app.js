@@ -23,6 +23,10 @@ const sequelize = new Sequelize(
   }
 )
 
+sequelize.authenticate()
+  .then(_ => console.log('La connexion à la base de données a bien été établie.'))
+  .catch(error => console.error(`Impossible de se connecter à la base de données ${error}`))
+
 app
   .use(favicon(__dirname + '/favicon.ico'))
   .use(morgan('dev'))
