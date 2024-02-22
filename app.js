@@ -10,7 +10,7 @@ const app = express()
 const port = 3000
 
 const sequelize = new Sequelize(
-  'root',
+  'pokedex',
   'root',
   '',
   {
