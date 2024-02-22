@@ -9,7 +9,7 @@ let pokemons = require('./mock-pokemon')
 const app = express()
 const port = 3000
 
-const sequelize = nex Sequelize(
+const sequelize = new Sequelize(
   'root',
   'root',
   '',
