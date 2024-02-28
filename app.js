@@ -28,7 +28,7 @@ sequelize.authenticate()
   .then(_ => console.log('La connexion à la base de données a bien été établie.'))
   .catch(error => console.error(`Impossible de se connecter à la base de données ${error}`))
 
-const Pokemon = PokemonModel(Sequelize, DataTypes)
+const Pokemon = PokemonModel(sequelize, DataTypes)
 
 sequelize.sync({force: true})
   .then(_ => console.log('La base de données "Pokedex" a bien été synchronisée'))
