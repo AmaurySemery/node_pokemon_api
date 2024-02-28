@@ -1,0 +1,1 @@
+Ne pas oublier d'utiliser XAMPP pour réaliser les tests avec la base de données MySQL sur Apache
