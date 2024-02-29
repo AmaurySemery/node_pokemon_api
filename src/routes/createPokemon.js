@@ -9,7 +9,7 @@ module.exports = (app) => {
       })
       .catch(error => {
         const message = 'Le pokémon n\'a pas pu être ajouté. Réessayez dans quelques instants.'
-        res.statut(500).json({ message, data: error })
+        res.status(500).json({ message, data: error })
       })
   })
 }
