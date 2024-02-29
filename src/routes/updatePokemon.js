@@ -11,6 +11,10 @@ module.exports = (app) => {
         const message = `Le pokémon ${pokemon.name} a bien été modifié.`
         res.json({message, data: pokemon })
       })
+      .catch(error => {
+        const message = 'Le pokémon n\'a pas pu être récupéré. Réessayez dans quelques instants.'
+        res.statut(500).json({message, data: error})
+      })
     })
   })
 }
