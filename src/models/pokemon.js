@@ -1,4 +1,4 @@
-const validTypes = ['Plante', 'Poison', 'Feu', 'Eau', 'Insecte', 'Vol', 'Normal', 'Electrique', 'Fée']
+const validTypes = ['Plante', 'Poison', 'Feu', 'Eau', 'Insecte', 'Vol', 'Normal', 'Electrik', 'Fée']
 
 /* L’API Rest et la Base de données : Créer un modèle Sequelize */
 module.exports = (sequelize, DataTypes) => {
