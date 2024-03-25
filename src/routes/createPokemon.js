@@ -10,7 +10,7 @@ module.exports = (app) => {
         res.json({ message, data: pokemon })
       })
       .catch(error => {
-        if(error instanceof ValidationError) {
+        if(error inst anceof ValidationError) {
           return res.status(400).json({ message: error.message, data: error })
         }
         if(error instanceof UniqueConstraintError) {
