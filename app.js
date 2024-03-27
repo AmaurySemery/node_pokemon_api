@@ -12,6 +12,10 @@ app
 
 sequelize.initDb()
 
+app.get('/', (req, res) => {
+  res.json('Hello, Heroku !')
+})
+
 // Ici, nous placerons nos futurs points de terminaison
 require('./src/routes/findAllPokemons')(app)
 require('./src/routes/createPokemon')(app)
