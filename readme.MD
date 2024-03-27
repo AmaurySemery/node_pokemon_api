@@ -14,3 +14,5 @@ en cas de défaut de mise en production:
 git add .
 git commit -m "some fix"
 git push heroku main
+
+Installer jawsDB Maria dans les Add-ons Heroku
